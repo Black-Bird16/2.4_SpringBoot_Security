@@ -1,0 +1,34 @@
+*******************************************************************************************************************************************************************
+**) Spring Security
+
+Spring Security is a powerful and highly customizable security framework that is often used in spring Boot Applications to handle authentication and authorization.
+
+*) Authentication → "Who are you?"
+
+The process of verifying a user's identity.
+- It verifies identity (e.g., username & password, tokens).
+- Example: Logging into a website with your email & password.
+
+*) Authorization → "What can you do?"
+
+The process of granting or denying access to specific resources or actions based on the authenticated user's role and permission.
+- It checks permissions (e.g., can you read, write, or delete data?).
+- Example: A normal user can view content, but an admin can edit or delete it.
+
+**) the client sends an Authentication header Authorization: Basic<encoded String>
+The Server decodes the string, extracts the username and password and verifies them.If they're correct access is granted. Otherwise an "Unauthorized" response is sent back.
+- By default, all endpoints will be secured Spring Security will generate a default user with a random password that is printed in the console logs on startup.
+
+
+**) WebSecurityConfigureAdapter : is a utility class in the spring security framework that provides default configurations and allows customization of certain features . By extending it, you can configure and customize spring security for your appliaction needs.
+*******************************************************************************************************************************************************************.
+**) 
+
+- Session Creation → When a user logs in, a session is created.
+- Session Cookie → A JSESSIONID cookie is stored in the browser to track the session.
+- SecurityContext → Holds user authentication details (who is logged in).
+- Session Timeout → Auto logout after inactivity (default 30 mins).
+- Logout → Ends the session, removing user data.
+- Remember Me → Keeps the user logged in even after closing the browser (uses a persistent cookie).
+*******************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************
